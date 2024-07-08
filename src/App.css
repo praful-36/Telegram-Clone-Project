@@ -1,0 +1,32 @@
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: rgb(17, 24, 39);
+  color: #fff;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.fixed {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.Three-dot {
+  font-size: 40px;
+  transform: scaleY(0.5);
+}
+
+.vertical-line {
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 100%;
+  box-shadow: 1px 1px 8px white;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
