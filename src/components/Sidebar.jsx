@@ -11,7 +11,7 @@ import { IoLogOutSharp } from "react-icons/io5";
 
 function Sidebar({ closeSidebar, darkMode, setDarkMode, sidebarOpen }) {
   return (
-    <div className={`fixed inset-0 z-50 flex transition-opacity duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-50 flex ${sidebarOpen ? '' : 'pointer-events-none'}`}>
       <div className={`w-64 bg-white dark:bg-gray-800 dark:text-white shadow-lg transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
           <h2 className="text-lg">Menu</h2>
@@ -31,10 +31,7 @@ function Sidebar({ closeSidebar, darkMode, setDarkMode, sidebarOpen }) {
           </ul>
         </div>
         <div className="p-4 border-t dark:border-gray-700">
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="w-full p-2 flex items-center justify-center bg-blue-500 text-white rounded-md"
-          >
+        <button onClick={() => setDarkMode(!darkMode)} className="w-full p-2 flex items-center justify-center bg-blue-500 text-white rounded-md" >
             <MdDarkMode className="mr-2" />
             {darkMode ? 'Light Mode' : 'Dark Mode'}
           </button>

@@ -82,13 +82,7 @@ function ChatWindow({ chatId, userName, handleBackToChatList }) {
         )}
       </div>
       <div className="p-4 border-t dark:border-gray-700 flex items-center">
-        <input
-          type="text"
-          placeholder="Type your message..."
-          value={newMessage}
-          onChange={handleNewMessageChange}
-          className="p-2 border rounded-md w-5/6 dark:bg-gray-700 dark:text-white"
-        />
+      <input type="text" placeholder="Type your message..." value={newMessage} onChange={handleNewMessageChange} className="p-2 border rounded-md w-5/6 dark:bg-gray-700 dark:text-white" />
         <button onClick={handleSendMessage} className=" p-2 bg-blue-500 text-white rounded-md mx-2">Send</button>
       </div>
     </div>

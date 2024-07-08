@@ -3,7 +3,7 @@ import axios from 'axios';
 import ChatList from './components/ChatList';
 import ChatWindow from './components/ChatWindow';
 import Sidebar from './components/Sidebar';
-import useWindowSize from './hooks/useWindowSize'; // import the custom hook
+import useWindowSize from './hooks/useWindowSize';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const windowSize = useWindowSize(); // use the custom hook
+  const windowSize = useWindowSize(); 
 
   useEffect(() => {
     const fetchChats = async () => {
@@ -59,7 +59,7 @@ function App() {
             {(!selectedChat || windowSize.width >= 640) && (
               <ChatList
                 chats={chats}
-                selectedChat={selectedChat} // Ensure selectedChat is passed as prop
+                selectedChat={selectedChat} 
                 setSelectedChat={setSelectedChat}
                 toggleSidebar={toggleSidebar}
                 searchQuery={searchQuery}
